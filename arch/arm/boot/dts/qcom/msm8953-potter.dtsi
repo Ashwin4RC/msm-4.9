@@ -17,6 +17,7 @@
 #include <moto-mem-reserve.h>
 #include "msm8953-camera-sensor-mot-potter.dtsi"
 #include "dsi-panel-mot-tianma-520-1080p-vid.dtsi"
+#include "msm8953-potter-fps.dtsi"
 
 / {
 	model = "potter";
@@ -220,26 +221,6 @@
 
 	/* Placeholder for SPI defined later */
 	spi_1: spi@7575000 { };
-
-	spi_8: spi@7af8000 { /* BLSP2 QUP3 */
-		compatible = "qcom,spi-qup-v2";
-		status = "ok";
-		#address-cells = <1>;
-		#size-cells = <0>;
-		reg-names = "spi_physical";
-		reg = <0x07af8000 0x600>;
-		interrupt-names = "spi_irq";
-		interrupts = <0 302 0>;
-		spi-max-frequency = <19200000>;
-
-		pinctrl-names = "spi_default", "spi_sleep";
-		pinctrl-0 = <&spi_8_active>;
-		pinctrl-1 = <&spi_8_sleep>;
-		qcom,infinite-mode = <0>;
-		qcom,master-id = <84>;
-		qcom,use-pinctrl;
-
-	};
 
 	qcom,msm-thermal {
 		qcom,config-info = "addison";
