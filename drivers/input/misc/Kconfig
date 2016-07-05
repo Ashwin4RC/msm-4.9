@@ -889,3 +889,8 @@ config INPUT_HISI_POWERKEY
 	  module will be called hisi_powerkey.
 
 endif
+
+config EPL8802
+	tristate "EPL8802 support"
+	help
+	proximity sensor driver.
