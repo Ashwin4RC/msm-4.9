@@ -18,6 +18,7 @@
 #include "msm8953-camera-sensor-mot-potter.dtsi"
 #include "dsi-panel-mot-tianma-520-1080p-vid.dtsi"
 #include "msm8953-potter-fps.dtsi"
+#include "msm8953-potter-sensor.dtsi"
 
 / {
 	model = "potter";
