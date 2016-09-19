@@ -39,7 +39,9 @@ dtb-$(CONFIG_ARCH_MDM9607) += mdm9607-mtp.dtb \
 dtb-$(CONFIG_ARCH_MSM8953) += msm8953-potter-p0a.dtb \
 	msm8953-potter-p1a.dtb \
 	msm8953-potter-p1b.dtb \
-	msm8953-potter-p2a.dtb
+	msm8953-potter-p2a.dtb \
+	msm8953-potter-p2a2.dtb \
+	msm8953-potter-p2b.dtb
 
 targets += dtbs
 
