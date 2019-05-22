@@ -521,6 +521,26 @@ config NX30P6093
 	  usb_psy to disable CC detection on the event of any water/debris
 	  detected at USBIN.
 
+config QPNP_SMBCHARGER_MMI
+	tristate "QPNP SMB Charger driver for MMI"
+	depends on SPMI || MSM_SPMI
+	depends on OF_SPMI
+	help
+	  Say Y here to enable the dual path switch mode battery charger which
+	  supports USB detection and battery charging up to 3A.
+	  The driver also offers relevant information to userspace via the
+	  power supply framework.
+
+config QPNP_SMBCHARGER_MMI_LITE
+	tristate "QPNP SMB Charger driver for MMI LITE"
+	depends on SPMI || MSM_SPMI
+	depends on OF_SPMI
+	help
+	  Say Y here to enable the dual path switch mode battery charger which
+	  supports USB detection and battery charging up to 3A.
+	  The driver also offers relevant information to userspace via the
+	  power supply framework.
+
 source "drivers/power/supply/qcom/Kconfig"
 
 endif # POWER_SUPPLY
