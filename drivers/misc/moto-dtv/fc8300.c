@@ -138,7 +138,7 @@ int isdbt_hw_setting(void)
 	gpio_direction_input(GPIO_ISDBT_IRQ);
 
 	err = request_irq(gpio_to_irq(GPIO_ISDBT_IRQ), isdbt_irq
-		, IRQF_DISABLED | IRQF_TRIGGER_FALLING, FC8300_NAME, NULL);
+		,  IRQF_TRIGGER_FALLING, FC8300_NAME, NULL);
 
 	if (err < 0) {
 		print_log(0,
