@@ -988,21 +988,9 @@ static int stml0xx_probe(struct spi_device *spi)
 
 	ps_stml0xx->dsdev.name = "dock";
 	ps_stml0xx->dsdev.print_name = dock_print_name;
-	err = switch_dev_register(&ps_stml0xx->dsdev);
-	if (err) {
-		dev_err(&spi->dev, "Couldn't register switch (%s) rc=%d",
-			ps_stml0xx->dsdev.name, err);
-		ps_stml0xx->dsdev.dev = NULL;
-	}
 
 	ps_stml0xx->edsdev.name = "extdock";
 	ps_stml0xx->edsdev.print_name = dock_print_name;
-	err = switch_dev_register(&ps_stml0xx->edsdev);
-	if (err) {
-		dev_err(&spi->dev, "Couldn't register switch (%s) rc=%d",
-			ps_stml0xx->edsdev.name, err);
-		ps_stml0xx->edsdev.dev = NULL;
-	}
 
 	ps_stml0xx->input_dev = input_allocate_device();
 	if (!ps_stml0xx->input_dev) {
@@ -1112,8 +1100,6 @@ static int stml0xx_remove(struct spi_device *spi)
 {
 	struct stml0xx_data *ps_stml0xx = spi_get_drvdata(spi);
 
-	switch_dev_unregister(&ps_stml0xx->dsdev);
-	switch_dev_unregister(&ps_stml0xx->edsdev);
 
 	if (ps_stml0xx->irq_wake != -1)
 		free_irq(ps_stml0xx->irq_wake, ps_stml0xx);
