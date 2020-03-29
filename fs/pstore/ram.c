@@ -442,7 +442,7 @@ static int ramoops_init_przs(struct device *dev, struct ramoops_context *cxt,
 		return 0;
 
 	if (*paddr + dump_mem_sz - cxt->phys_addr > cxt->size) {
-		dev_err(dev, "no room for dumps\n");
+		dev_err(dev, "no room for dumps, diff: %llx > % llx\n", *paddr + dump_mem_sz - cxt->phys_addr, cxt->size );
 		return -ENOMEM;
 	}
 
