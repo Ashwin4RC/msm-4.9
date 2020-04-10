@@ -472,7 +472,7 @@
 		/delete-property/ pinctrl-14;
 		/delete-property/ pinctrl-15;
 
-		asoc-codec = <&stub_codec>, <&pm8953_diangu_dig>;
+		asoc-codec = <&stub_codec>, <&msm_digital_codec>;
 		asoc-codec-names = "msm-stub-codec.1", "cajon_codec";
 	};
 

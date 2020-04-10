@@ -20,6 +20,6 @@
 	qcom,board-id = <0x44 0x81b0>;
 };
 
-&pm8953_diangu_dig {
+&msm_digital_codec {
 	qcom,cdc-boost-pdm-clk;
 };
