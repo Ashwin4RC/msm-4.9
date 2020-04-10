@@ -31,6 +31,15 @@ dtb-$(CONFIG_MONTANA_DTB) += \
 	msm8937-montana-p2.dtb \
 	msm8937-montana-p3.dtb
 
+dtb-$(CONFIG_POTTER_DTB) += \
+        msm8953-potter-p0a.dtb \
+	msm8953-potter-p1a.dtb \
+	msm8953-potter-p1b.dtb \
+	msm8953-potter-p2a.dtb \
+	msm8953-potter-p2a2.dtb \
+	msm8953-potter-p2b.dtb \
+	msm8953-potter-p3a.dtb
+
 dtb-$(CONFIG_SANDERS_DTB) += \
 	msm8953-sanders-p1.dtb \
 	msm8953-sanders-p2.dtb \
